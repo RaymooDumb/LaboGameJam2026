@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dnkeafld72t5n"]
+
+[ext_resource type="Texture2D" uid="uid://cex1ifco6rna6" path="res://sprites/testSprites/GenericBackground.png" id="1_83s16"]
+[ext_resource type="Script" uid="uid://dikpt72movnva" path="res://main_menu.gd" id="1_w7d22"]
+[ext_resource type="Texture2D" uid="uid://bu5v8gvsyv5bc" path="res://sprites/testSprites/Loner.png" id="2_w7d22"]
+
+[node name="Menu" type="Control" unique_id=1550044016]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w7d22")
+
+[node name="Sprites" type="MarginContainer" parent="." unique_id=1611182384]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="Sprites" unique_id=114751261]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_83s16")
+
+[node name="Loner" type="Sprite2D" parent="Sprites" unique_id=873953703]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_w7d22")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=672052156]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = -166.0
+offset_right = 149.0
+offset_bottom = -65.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=118411122]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Jugar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1919690757]
+layout_mode = 2
+text = "Jugar"
+
+[node name="Ola" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1808312225]
+layout_mode = 2
+text = "Ola"
+
+[node name="Salir" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1144364183]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]
