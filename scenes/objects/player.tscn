@@ -6,7 +6,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_54rde"]
 
 [node name="Player" type="CharacterBody2D" unique_id=761264420]
-position = Vector2(0, -1)
 motion_mode = 1
 script = ExtResource("1_2147m")
 
