@@ -4,7 +4,7 @@ var current_track: AudioStreamPlayer
 
 # Song Dictionary
 var songs := {
-	"menu": preload("res://songs/AmbientacionABI.wav")	
+	"menu": preload("res://songs/Miedo bro.wav")	
 }
 
 # On ready slop

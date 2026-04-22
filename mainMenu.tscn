@@ -2,7 +2,29 @@
 
 [ext_resource type="Texture2D" uid="uid://cex1ifco6rna6" path="res://sprites/testSprites/GenericBackground.png" id="1_83s16"]
 [ext_resource type="Script" uid="uid://dikpt72movnva" path="res://scripts/main_menu.gd" id="1_w7d22"]
-[ext_resource type="Texture2D" uid="uid://bu5v8gvsyv5bc" path="res://sprites/testSprites/Loner.png" id="2_w7d22"]
+[ext_resource type="Texture2D" uid="uid://cgf710jeimohd" path="res://sprites/menu/LonerBG1.png" id="3_c3jr6"]
+[ext_resource type="Texture2D" uid="uid://cmt7xjo8r61tx" path="res://sprites/menu/LonerBG2.png" id="4_hvu0j"]
+[ext_resource type="Texture2D" uid="uid://bkonnq30uyfr" path="res://sprites/menu/LonerBG3.png" id="5_0ei6b"]
+[ext_resource type="Texture2D" uid="uid://cuta2u1ark2si" path="res://sprites/menu/LonerOnly.png" id="6_rdsan"]
+[ext_resource type="Texture2D" uid="uid://bsh3ftgbkfuh" path="res://sprites/menu/jam_Jugar.png" id="7_0ei6b"]
+[ext_resource type="Texture2D" uid="uid://biu1btlsrwjnc" path="res://sprites/menu/jam_Salir.png" id="8_rdsan"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fy5us"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c3jr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hvu0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0ei6b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="Menu" type="Control" unique_id=1550044016]
 layout_mode = 3
@@ -27,35 +49,38 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_83s16")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites" unique_id=599861185]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fy5us")
+autoplay = "default"
+
 [node name="Loner" type="Sprite2D" parent="Sprites" unique_id=873953703]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_w7d22")
+texture = ExtResource("6_rdsan")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=672052156]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = -166.0
-offset_right = 149.0
-offset_bottom = -65.0
+offset_left = 80.0
+offset_top = -495.0
+offset_right = 1250.0
+offset_bottom = 133.0
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=118411122]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_constants/separation = 50
 
-[node name="Jugar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1919690757]
+[node name="Jugar" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1429636369]
 layout_mode = 2
-text = "Jugar"
+texture_normal = ExtResource("7_0ei6b")
 
-[node name="Ola" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1808312225]
+[node name="Salir" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1739786991]
 layout_mode = 2
-text = "Ola"
-
-[node name="Salir" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1144364183]
-layout_mode = 2
-text = "Salir"
+texture_normal = ExtResource("8_rdsan")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]
