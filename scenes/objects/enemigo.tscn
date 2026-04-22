@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cuikyhhwwme6x"]
+
+[ext_resource type="Script" uid="uid://cf4lay8hcgpec" path="res://scripts/Enemigo.gd" id="1_kn40c"]
+[ext_resource type="Texture2D" uid="uid://curnqoyn4nuwj" path="res://icon.svg" id="1_qj036"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45oby"]
+
+[node name="Enemigo" type="Area2D" unique_id=352359588]
+script = ExtResource("1_kn40c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=828822105]
+texture = ExtResource("1_qj036")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1888864368]
+scale = Vector2(6.475231, 6.475231)
+shape = SubResource("RectangleShape2D_45oby")
+debug_color = Color(0.9971996, 0, 0.18073413, 0.41960785)
