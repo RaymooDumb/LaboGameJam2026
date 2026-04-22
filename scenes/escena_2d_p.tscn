@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://beu6mrahuyhl2"]
+
+[ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="1_5n0i8"]
+[ext_resource type="Texture2D" uid="uid://curnqoyn4nuwj" path="res://icon.svg" id="2_6toe2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfqmo"]
+
+[node name="Escena_2D_P" type="Node2D" unique_id=1570273709]
+
+[node name="Interactuable" type="Area2D" parent="." unique_id=495580865]
+position = Vector2(1444, 594)
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactuable" unique_id=1329656121]
+scale = Vector2(3.523738, 3.523738)
+texture = ExtResource("2_6toe2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactuable" unique_id=941393492]
+scale = Vector2(23.645071, 23.645071)
+shape = SubResource("RectangleShape2D_dfqmo")
+
+[node name="Player" parent="." unique_id=761264420 instance=ExtResource("1_5n0i8")]
+position = Vector2(826, 632)
