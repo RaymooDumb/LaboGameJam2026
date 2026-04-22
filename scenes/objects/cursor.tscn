@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cvtpjsxgahtdl"]
+
+[ext_resource type="Script" uid="uid://bhp8cef7bs76" path="res://scripts/cursor.gd" id="1_ni3yx"]
+[ext_resource type="Texture2D" uid="uid://dtmdacwmfflbt" path="res://sprites/housedead/jam_Cuursor.png" id="1_qittm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ni3yx"]
+
+[node name="Cursor" type="Area2D" unique_id=1850094838]
+script = ExtResource("1_ni3yx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1426126282]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qittm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1978829551]
+scale = Vector2(5.1321497, 5.1321497)
+shape = SubResource("CircleShape2D_ni3yx")
+debug_color = Color(0.99532086, 0, 0.21516901, 0.41960785)
