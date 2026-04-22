@@ -1,24 +1,17 @@
 extends CharacterBody2D
+var speed = 300
 
-@export var speedset = 500
-var speed
+func _physics_process(delta):
+	var direction = Vector2.ZERO
 
-func _ready():
-	pass
+	if Input.is_action_pressed("Right"):
+		direction.x += 1
+	elif Input.is_action_pressed("Left"):
+		direction.x -= 1
+	elif Input.is_action_pressed("Down"):
+		direction.y += 1
+	elif Input.is_action_pressed("Up"):
+		direction.y -= 1
 
-func get_input():
-	var input_direction = Input.get_vector("Left","Right","Up","Down")
-	if Input.is_anything_pressed():
-		velocity = input_direction * speed
-	else:
-		velocity = Vector2(0,0)
-
-func _physics_process(_delta):
-	speed = speedset
-	
-	# Esto es para cuando se necesite ver si colisiona con algo
-	#var collision = move_and_collide(velocity * delta)
-	
-	get_input()
-	
+	velocity = direction.normalized() * speed
 	move_and_slide()

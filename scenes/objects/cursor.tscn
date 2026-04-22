@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni3yx"]
 
-[node name="Cursor" type="Area2D" unique_id=1850094838]
+[node name="Cursor" type="Area2D" unique_id=32566865]
 script = ExtResource("1_ni3yx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1426126282]
