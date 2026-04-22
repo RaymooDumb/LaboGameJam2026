@@ -6,7 +6,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_54rde"]
 
 [node name="Player" type="CharacterBody2D" unique_id=761264420]
-motion_mode = 1
 script = ExtResource("1_2147m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=906189492]

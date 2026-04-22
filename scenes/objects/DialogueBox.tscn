@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dow85j0183ik8" path="res://sprites/talk/TalkLonerBG.png" id="1_ervv7"]
 [ext_resource type="Texture2D" uid="uid://cum05tflewco7" path="res://sprites/talk/TalkMonsterBG.png" id="2_0qxgj"]
+[ext_resource type="Texture2D" uid="uid://dkeawy0g7bcee" path="res://sprites/talk/DialogueBox.png" id="3_0qxgj"]
+[ext_resource type="FontFile" uid="uid://c48io6oovqojo" path="res://SimpleNotesVP-FreeDemo.otf" id="4_f0qyh"]
 
 [node name="DialogueBox" type="CanvasLayer" unique_id=122866163]
 
@@ -26,6 +28,23 @@ grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("2_0qxgj")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2115523871]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -681.0
+offset_top = -402.0
+offset_right = 830.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8979804, 0.7117299)
+theme_override_fonts/normal_font = ExtResource("4_f0qyh")
+theme_override_font_sizes/normal_font_size = 96
+text = "Ola soy silksong"
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1949133631]
 anchors_preset = 7
 anchor_left = 0.5
@@ -40,12 +59,4 @@ grow_vertical = 0
 
 [node name="Box" type="TextureRect" parent="MarginContainer" unique_id=885664313]
 layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1872313657]
-layout_mode = 2
-
-[node name="Label" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1491806215]
-layout_mode = 2
-
-[node name="Dialogue" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=2137954614]
-layout_mode = 2
+texture = ExtResource("3_0qxgj")
