@@ -19,7 +19,7 @@ func get_input(_delta):
 		else:
 			print("debes recargar")
 		cambiar_municion_representada()
-	if Input.is_action_just_pressed("recargar"):
+	if Input.is_action_just_pressed("Reload"):
 		if municion_actual < municion_maxima:
 			municion_actual= municion_maxima
 			print("has recargado")
