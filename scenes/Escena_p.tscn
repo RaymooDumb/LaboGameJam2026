@@ -1,18 +1,25 @@
 [gd_scene format=3 uid="uid://dxka5apvwdq23"]
 
 [ext_resource type="PackedScene" uid="uid://cvtpjsxgahtdl" path="res://scenes/objects/cursor.tscn" id="1_1wlxs"]
-[ext_resource type="Script" uid="uid://d1shcey8e04de" path="res://scripts/Pantalla.gd" id="1_x6fsx"]
+[ext_resource type="Script" uid="uid://6af5hcsad2r6" path="res://scripts/Spawner.gd" id="1_x6fsx"]
+[ext_resource type="AudioStream" uid="uid://dbp3bo7p8wyp5" path="res://songs/Balazo.ogg" id="3_x6fsx"]
 
 [node name="Node2D" type="Node2D" unique_id=97580541]
 script = ExtResource("1_x6fsx")
 
 [node name="Spawn1" type="Node2D" parent="." unique_id=1808609370]
+position = Vector2(1516, 320)
 
 [node name="Spawn2" type="Node2D" parent="." unique_id=9766250]
+position = Vector2(518, 607)
 
 [node name="Spawn3" type="Node2D" parent="." unique_id=1107169970]
+position = Vector2(1446, 895)
 
 [node name="Cursor" parent="." unique_id=32566865 instance=ExtResource("1_1wlxs")]
+
+[node name="AudioDisparo" type="AudioStreamPlayer2D" parent="." unique_id=2052916177]
+stream = ExtResource("3_x6fsx")
 
 [connection signal="area_entered" from="Cursor" to="." method="_on_cursor_area_entered"]
 [connection signal="area_exited" from="Cursor" to="." method="_on_cursor_area_exited"]

@@ -62,6 +62,14 @@ func spawn_enemigo():
 	enemigo_actual.global_position = punto.global_position
 	enemigo_actual.tree_exited.connect(_on_enemigo_muerto)
 func _on_enemigo_muerto():
-	var tree = get_tree()
-	await tree.create_timer(1.0).timeout
-	spawn_enemigo()
+	var timer = Timer.new()
+	timer.wait_time = 1.0
+	timer.one_shot = true
+	add_child(timer)
+	
+	timer.timeout.connect(func():
+		spawn_enemigo()
+		timer.queue_free()
+	)
+	
+	timer.start()
