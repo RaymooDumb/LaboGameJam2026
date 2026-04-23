@@ -1,20 +1,21 @@
 extends CharacterBody2D
 var speed = 300
 
-var rightLook : bool = true
+@export var rightLook : bool = true
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
 	if velocity != Vector2(0,0):
 		$AnimatedSprite2D.play("walk")
-		if rightLook == true:
-			$AnimatedSprite2D.flip_h = false
-		else:
-			$AnimatedSprite2D.flip_h = true
 	else:
 		$AnimatedSprite2D.play("standing")
 	
+	if rightLook == true:
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
+		
 	if Input.is_action_pressed("Right"):
 		rightLook = true
 		direction.x += 1

@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://dnkeafld72t5n"]
 
-[ext_resource type="Script" uid="uid://dikpt72movnva" path="res://scripts/main_menu.gd" id="1_w7d22"]
-[ext_resource type="Texture2D" uid="uid://73eyb1w8q6tc" path="res://sprites/menu/TalkBG2.png" id="2_0ei6b"]
-[ext_resource type="Texture2D" uid="uid://cgf710jeimohd" path="res://sprites/menu/LonerBG1.png" id="3_c3jr6"]
-[ext_resource type="Texture2D" uid="uid://cmt7xjo8r61tx" path="res://sprites/menu/LonerBG2.png" id="4_hvu0j"]
-[ext_resource type="Texture2D" uid="uid://bkonnq30uyfr" path="res://sprites/menu/LonerBG3.png" id="5_0ei6b"]
-[ext_resource type="Texture2D" uid="uid://cuta2u1ark2si" path="res://sprites/menu/LonerOnly.png" id="6_rdsan"]
-[ext_resource type="Texture2D" uid="uid://bsh3ftgbkfuh" path="res://sprites/menu/jam_Jugar.png" id="7_0ei6b"]
-[ext_resource type="Texture2D" uid="uid://biu1btlsrwjnc" path="res://sprites/menu/jam_Salir.png" id="8_rdsan"]
+[ext_resource type="Script" uid="uid://dikpt72movnva" path="res://scripts/main_menu.gd" id="1_y35fp"]
+[ext_resource type="Texture2D" uid="uid://73eyb1w8q6tc" path="res://sprites/menu/TalkBG2.png" id="2_dj72i"]
+[ext_resource type="Texture2D" uid="uid://cgf710jeimohd" path="res://sprites/menu/LonerBG1.png" id="3_6b2wv"]
+[ext_resource type="Texture2D" uid="uid://cmt7xjo8r61tx" path="res://sprites/menu/LonerBG2.png" id="4_tov5d"]
+[ext_resource type="Texture2D" uid="uid://bkonnq30uyfr" path="res://sprites/menu/LonerBG3.png" id="5_epn8x"]
+[ext_resource type="Texture2D" uid="uid://cuta2u1ark2si" path="res://sprites/menu/LonerOnly.png" id="6_vt84v"]
+[ext_resource type="Texture2D" uid="uid://bsh3ftgbkfuh" path="res://sprites/menu/jam_Jugar.png" id="7_lam2r"]
+[ext_resource type="Texture2D" uid="uid://biu1btlsrwjnc" path="res://sprites/menu/jam_Salir.png" id="8_amia2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fy5us"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_c3jr6")
+"texture": ExtResource("3_6b2wv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hvu0j")
+"texture": ExtResource("4_tov5d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_0ei6b")
+"texture": ExtResource("5_epn8x")
 }],
 "loop": true,
 "name": &"default",
@@ -33,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_w7d22")
+script = ExtResource("1_y35fp")
 
 [node name="Sprites" type="MarginContainer" parent="." unique_id=1611182384]
 layout_mode = 1
@@ -47,7 +47,7 @@ grow_vertical = 2
 
 [node name="Background" type="Sprite2D" parent="Sprites" unique_id=114751261]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_0ei6b")
+texture = ExtResource("2_dj72i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites" unique_id=599861185]
 scale = Vector2(0.5, 0.5)
@@ -56,7 +56,7 @@ autoplay = "default"
 
 [node name="Loner" type="Sprite2D" parent="Sprites" unique_id=873953703]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_rdsan")
+texture = ExtResource("6_vt84v")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=672052156]
 layout_mode = 1
@@ -77,10 +77,11 @@ theme_override_constants/separation = 50
 
 [node name="Jugar" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1429636369]
 layout_mode = 2
-texture_normal = ExtResource("7_0ei6b")
+texture_normal = ExtResource("7_lam2r")
 
 [node name="Salir" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1739786991]
 layout_mode = 2
-texture_normal = ExtResource("8_rdsan")
+texture_normal = ExtResource("8_amia2")
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

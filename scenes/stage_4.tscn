@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1k2pqj2gm2rj"]
+
+[ext_resource type="Texture2D" uid="uid://1w6hda7pf11x" path="res://sprites/backgrounds/BG4.png" id="1_7jyod"]
+[ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_ihxym"]
+[ext_resource type="Texture2D" uid="uid://crr31ji3jwthp" path="res://sprites/backgrounds/FG4.png" id="3_uj5qn"]
+
+[node name="Stage4" type="Node2D" unique_id=1988120835]
+
+[node name="BG" type="TextureRect" parent="." unique_id=1628557961]
+offset_right = 1280.0
+offset_bottom = 717.0
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("1_7jyod")
+
+[node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_ihxym")]
+position = Vector2(423, 473)
+scale = Vector2(0.5482895, 0.5482895)
+
+[node name="BG2" type="TextureRect" parent="." unique_id=234632700]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("3_uj5qn")
