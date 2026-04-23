@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cyvgamy2vf6vb" path="res://sprites/backgrounds/BG9.png" id="1_fmo4c"]
 [ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_pwu1x"]
 [ext_resource type="Texture2D" uid="uid://c7l3363fktnke" path="res://sprites/backgrounds/FG9.png" id="3_g2vqx"]
+[ext_resource type="PackedScene" uid="uid://dd7eg7kr0sd51" path="res://scenes/objects/wall.tscn" id="4_pwu1x"]
+[ext_resource type="PackedScene" uid="uid://nqce3k1h6thl" path="res://scenes/objects/interactable.tscn" id="5_g2vqx"]
 
 [node name="Stage9" type="Node2D" unique_id=1988120835]
 
@@ -21,3 +23,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.48, 0.48)
 texture = ExtResource("3_g2vqx")
+
+[node name="Wall" parent="." unique_id=74226108 instance=ExtResource("4_pwu1x")]
+position = Vector2(624, 543)
+
+[node name="Interactable" parent="." unique_id=397170082 instance=ExtResource("5_g2vqx")]
+position = Vector2(1322, 524)
+interactableType = "stageBattle"

@@ -19,6 +19,7 @@ scale = Vector2(0.5823468, 0.5823468)
 
 [node name="Interactable" parent="." unique_id=397170082 instance=ExtResource("2_6toe2")]
 position = Vector2(1286, 599)
+interactableType = "stage_1"
 
 [node name="BG2" type="TextureRect" parent="." unique_id=1248369234]
 offset_right = 40.0

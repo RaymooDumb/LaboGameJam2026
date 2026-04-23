@@ -4,7 +4,10 @@ var current_track: AudioStreamPlayer
 
 # Song Dictionary
 var songs := {
-	"menu": preload("res://songs/Miedo bro.ogg")	
+	"menu": preload("res://songs/Miedo bro.ogg"),
+	"world": preload("res://songs/Sorrow.ogg"),
+	"revelation": preload("res://songs/Strong.ogg"),
+	"battle": preload("res://songs/Endless Darkness.ogg")
 }
 
 # On ready slop

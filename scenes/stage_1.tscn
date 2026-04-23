@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://t0uccojog0pk"]
 
-[ext_resource type="Texture2D" uid="uid://ciogsoe0ksi2l" path="res://sprites/backgrounds/BG1.png" id="1_u47qm"]
-[ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_u47qm"]
-[ext_resource type="Texture2D" uid="uid://dphh7awfeoyj0" path="res://sprites/backgrounds/FG1.png" id="3_e77qm"]
+[ext_resource type="Texture2D" uid="uid://ciogsoe0ksi2l" path="res://sprites/backgrounds/BG1.png" id="1_e77qm"]
+[ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_kx1yv"]
+[ext_resource type="Texture2D" uid="uid://dphh7awfeoyj0" path="res://sprites/backgrounds/FG1.png" id="3_e4xaw"]
+[ext_resource type="PackedScene" uid="uid://dd7eg7kr0sd51" path="res://scenes/objects/wall.tscn" id="4_tgiw8"]
+[ext_resource type="PackedScene" uid="uid://nqce3k1h6thl" path="res://scenes/objects/interactable.tscn" id="5_kx1yv"]
 
 [node name="Stage1" type="Node2D" unique_id=1988120835]
 
@@ -10,10 +12,10 @@
 offset_right = 1280.0
 offset_bottom = 717.0
 scale = Vector2(1.51, 1.51)
-texture = ExtResource("1_u47qm")
+texture = ExtResource("1_e77qm")
 
-[node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_u47qm")]
-position = Vector2(1186.0001, 575)
+[node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_kx1yv")]
+position = Vector2(1178, 574)
 scale = Vector2(0.5823468, 0.5823468)
 rightLook = false
 
@@ -21,4 +23,11 @@ rightLook = false
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1.51, 1.51)
-texture = ExtResource("3_e77qm")
+texture = ExtResource("3_e4xaw")
+
+[node name="Wall" parent="." unique_id=74226108 instance=ExtResource("4_tgiw8")]
+position = Vector2(1909, 572)
+
+[node name="Interactable" parent="." unique_id=397170082 instance=ExtResource("5_kx1yv")]
+position = Vector2(16, 495)
+interactableType = "stage_1"

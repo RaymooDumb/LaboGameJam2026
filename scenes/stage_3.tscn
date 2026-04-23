@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c1kibgml6seds" path="res://sprites/backgrounds/BG3.png" id="1_556kb"]
 [ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_3fpcl"]
 [ext_resource type="Texture2D" uid="uid://chh7gv8kownot" path="res://sprites/backgrounds/FG3.png" id="3_3fpcl"]
+[ext_resource type="PackedScene" uid="uid://dd7eg7kr0sd51" path="res://scenes/objects/wall.tscn" id="4_3fpcl"]
+[ext_resource type="PackedScene" uid="uid://nqce3k1h6thl" path="res://scenes/objects/interactable.tscn" id="5_8ao8k"]
 
 [node name="Stage3" type="Node2D" unique_id=1988120835]
 
@@ -13,7 +15,7 @@ scale = Vector2(0.48, 0.48)
 texture = ExtResource("1_556kb")
 
 [node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_3fpcl")]
-position = Vector2(98.99999, 460)
+position = Vector2(117.00001, 460.00003)
 scale = Vector2(0.6033942, 0.6033942)
 
 [node name="BG2" type="TextureRect" parent="." unique_id=234632700]
@@ -21,3 +23,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.48, 0.48)
 texture = ExtResource("3_3fpcl")
+
+[node name="Wall" parent="." unique_id=74226108 instance=ExtResource("4_3fpcl")]
+position = Vector2(24, 453)
+
+[node name="Interactable" parent="." unique_id=397170082 instance=ExtResource("5_8ao8k")]
+position = Vector2(1871, 452)
+interactableType = "stage_3"

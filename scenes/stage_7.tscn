@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bo4f41cwp6phx" path="res://sprites/backgrounds/BG7.png" id="1_qo8wt"]
 [ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_ts4ae"]
+[ext_resource type="PackedScene" uid="uid://dd7eg7kr0sd51" path="res://scenes/objects/wall.tscn" id="3_ts4ae"]
+[ext_resource type="PackedScene" uid="uid://nqce3k1h6thl" path="res://scenes/objects/interactable.tscn" id="4_wkobd"]
 
 [node name="Stage7" type="Node2D" unique_id=1988120835]
 
@@ -14,3 +16,10 @@ texture = ExtResource("1_qo8wt")
 [node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_ts4ae")]
 position = Vector2(171.00002, 712.00006)
 scale = Vector2(1.1282468, 1.1282468)
+
+[node name="Wall" parent="." unique_id=74226108 instance=ExtResource("3_ts4ae")]
+position = Vector2(33, 694)
+
+[node name="Interactable" parent="." unique_id=397170082 instance=ExtResource("4_wkobd")]
+position = Vector2(1482, 695)
+interactableType = "stage_7"

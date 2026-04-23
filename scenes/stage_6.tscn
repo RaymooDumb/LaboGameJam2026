@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bmc13ubmg5uj7" path="res://sprites/backgrounds/BG6.png" id="1_lhglv"]
 [ext_resource type="PackedScene" uid="uid://bu1ttm65kkhhu" path="res://scenes/objects/player.tscn" id="2_45mhh"]
 [ext_resource type="Texture2D" uid="uid://chcyoi482eio7" path="res://sprites/backgrounds/FG6.png" id="3_nvybk"]
+[ext_resource type="PackedScene" uid="uid://dd7eg7kr0sd51" path="res://scenes/objects/wall.tscn" id="4_45mhh"]
+[ext_resource type="PackedScene" uid="uid://nqce3k1h6thl" path="res://scenes/objects/interactable.tscn" id="5_nvybk"]
 
 [node name="Stage6" type="Node2D" unique_id=1988120835]
 
@@ -22,3 +24,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.48, 0.48)
 texture = ExtResource("3_nvybk")
+
+[node name="Wall" parent="." unique_id=74226108 instance=ExtResource("4_45mhh")]
+position = Vector2(1926, 608)
+
+[node name="Interactable" parent="." unique_id=397170082 instance=ExtResource("5_nvybk")]
+position = Vector2(118, 583)
+interactableType = "stage_6"
