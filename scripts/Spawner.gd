@@ -98,4 +98,4 @@ func _on_enemigo_muerto():
 
 func _on_jugador_muerto():
 	print("PERDISTE")
-	get_tree().change_scene_to_file("res://mainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/EscenaMuerte.tscn")
