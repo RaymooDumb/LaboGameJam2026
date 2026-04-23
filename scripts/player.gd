@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var speed = 300
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 
 	if Input.is_action_pressed("Right"):

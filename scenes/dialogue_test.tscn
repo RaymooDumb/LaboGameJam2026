@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://imxlw1d8jied"]
+
+[ext_resource type="Script" uid="uid://b62pqenopaigj" path="res://scripts/dialogue_test.gd" id="1_gquwp"]
+[ext_resource type="Texture2D" uid="uid://cex1ifco6rna6" path="res://sprites/testSprites/GenericBackground.png" id="2_se20b"]
+
+[node name="DialogueTest" type="Node2D" unique_id=2039448742]
+script = ExtResource("1_gquwp")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=182341925]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_se20b")
