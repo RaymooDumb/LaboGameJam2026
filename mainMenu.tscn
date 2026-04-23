@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnkeafld72t5n"]
 
-[ext_resource type="Texture2D" uid="uid://cex1ifco6rna6" path="res://sprites/testSprites/GenericBackground.png" id="1_83s16"]
 [ext_resource type="Script" uid="uid://dikpt72movnva" path="res://scripts/main_menu.gd" id="1_w7d22"]
+[ext_resource type="Texture2D" uid="uid://73eyb1w8q6tc" path="res://sprites/menu/TalkBG2.png" id="2_0ei6b"]
 [ext_resource type="Texture2D" uid="uid://cgf710jeimohd" path="res://sprites/menu/LonerBG1.png" id="3_c3jr6"]
 [ext_resource type="Texture2D" uid="uid://cmt7xjo8r61tx" path="res://sprites/menu/LonerBG2.png" id="4_hvu0j"]
 [ext_resource type="Texture2D" uid="uid://bkonnq30uyfr" path="res://sprites/menu/LonerBG3.png" id="5_0ei6b"]
@@ -47,7 +47,7 @@ grow_vertical = 2
 
 [node name="Background" type="Sprite2D" parent="Sprites" unique_id=114751261]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_83s16")
+texture = ExtResource("2_0ei6b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites" unique_id=599861185]
 scale = Vector2(0.5, 0.5)
