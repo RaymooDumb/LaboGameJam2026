@@ -1,14 +1,16 @@
-[gd_scene format=3 uid="uid://b72rgnuknyirk"]
+[gd_scene format=3 uid="uid://dxka5apvwdq23"]
 
 [ext_resource type="PackedScene" uid="uid://cvtpjsxgahtdl" path="res://scenes/objects/cursor.tscn" id="1_1wlxs"]
 [ext_resource type="Script" uid="uid://d1shcey8e04de" path="res://scripts/Pantalla.gd" id="1_x6fsx"]
-[ext_resource type="PackedScene" uid="uid://cuikyhhwwme6x" path="res://scenes/objects/enemigo.tscn" id="2_x6fsx"]
 
 [node name="Node2D" type="Node2D" unique_id=97580541]
 script = ExtResource("1_x6fsx")
 
-[node name="Enemigo" parent="." unique_id=352359588 instance=ExtResource("2_x6fsx")]
-position = Vector2(691, 399)
+[node name="Spawn1" type="Node2D" parent="." unique_id=1808609370]
+
+[node name="Spawn2" type="Node2D" parent="." unique_id=9766250]
+
+[node name="Spawn3" type="Node2D" parent="." unique_id=1107169970]
 
 [node name="Cursor" parent="." unique_id=32566865 instance=ExtResource("1_1wlxs")]
 

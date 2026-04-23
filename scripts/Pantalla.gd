@@ -4,10 +4,19 @@ var municion_maxima = 6
 var municion_actual = municion_maxima
 var area_en_la_mira = null
 signal cambiar_vida(cantidad)
+var enemigo_escena = preload("res://scenes/objects/enemigo.tscn")
+
+@onready var puntos_spawn = [
+	$Spawn1,
+	$Spawn2,
+	$Spawn3
+] 
+var enemigo_actual = null
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	var _ce = cambiar_vida.connect($Enemigo.me_han_dado)
+	#var _ce = cambiar_vida.connect($Enemigo.me_han_dado)
+	spawn_enemigo()
 
 func get_input(_delta):
 	if Input.is_action_just_pressed("Click"):
@@ -44,3 +53,15 @@ func _on_cursor_area_entered(area):
 func _on_cursor_area_exited(_area):
 	#print("area exited")
 	area_en_la_mira = null
+
+func spawn_enemigo():
+	var punto = puntos_spawn[randi()%puntos_spawn.size()]
+	
+	enemigo_actual = enemigo_escena.instantiate()
+	add_child(enemigo_actual)
+	enemigo_actual.global_position = punto.global_position
+	enemigo_actual.tree_exited.connect(_on_enemigo_muerto)
+func _on_enemigo_muerto():
+	var tree = get_tree()
+	await tree.create_timer(1.0).timeout
+	spawn_enemigo()

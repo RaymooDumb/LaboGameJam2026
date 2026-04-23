@@ -15,3 +15,6 @@ texture = ExtResource("1_qj036")
 scale = Vector2(6.475231, 6.475231)
 shape = SubResource("RectangleShape2D_45oby")
 debug_color = Color(0.9971996, 0, 0.18073413, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=1853745577]
+wait_time = 3.0
