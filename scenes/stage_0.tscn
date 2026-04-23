@@ -26,8 +26,7 @@ position = Vector2(1908, 873)
 [node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_3ic66")]
 position = Vector2(1681, 905)
 scale = Vector2(1.6713383, 1.6713383)
-speed = 350
-rightLook = false
+speed = 380
 
 [node name="FG" type="TextureRect" parent="." unique_id=701719019]
 offset_right = 40.0

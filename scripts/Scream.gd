@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	MusicManager.stop_music()
 	$AudioStreamPlayer.play()
 	
 	# esperar 3 segundos y regresar al menú

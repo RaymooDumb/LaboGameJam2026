@@ -17,6 +17,7 @@ texture = ExtResource("1_lhglv")
 [node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_45mhh")]
 position = Vector2(1843, 572)
 scale = Vector2(0.6071428, 0.6071428)
+speed = 340
 rightLook = false
 
 [node name="BG2" type="TextureRect" parent="." unique_id=234632700]

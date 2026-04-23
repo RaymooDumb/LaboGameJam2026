@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://chxti74wed3i8"]
+
+[ext_resource type="Script" path="res://scripts/Scream.gd" id="1_4bamm"]
+[ext_resource type="Texture2D" uid="uid://dt7mirlq5odpl" path="res://sprites/backgrounds/Black_colour.jpg" id="2_4bamm"]
+[ext_resource type="AudioStream" uid="uid://diarfi2y05vic" path="res://songs/Gritobro.ogg" id="3_nsh7o"]
+
+[node name="EscenaMuerte" type="Node2D" unique_id=1717268100]
+script = ExtResource("1_4bamm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=793276674]
+position = Vector2(958.5, 539.5)
+scale = Vector2(4.033228, 1.6977848)
+texture = ExtResource("2_4bamm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1372506302]
+stream = ExtResource("3_nsh7o")
+autoplay = true

@@ -17,6 +17,7 @@ texture = ExtResource("1_7jyod")
 [node name="Player" parent="." unique_id=761264420 instance=ExtResource("2_ihxym")]
 position = Vector2(423, 473)
 scale = Vector2(0.5482895, 0.5482895)
+speed = 330
 
 [node name="BG2" type="TextureRect" parent="." unique_id=234632700]
 offset_right = 40.0

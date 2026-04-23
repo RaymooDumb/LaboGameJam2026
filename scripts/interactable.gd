@@ -12,7 +12,7 @@ var interactionary := {
 	"stage_6": "res://scenes/stage_7.tscn",
 	"stage_7": "res://scenes/stage_8.tscn",
 	"stage_8": "res://scenes/stage_9.tscn",
-	"stage_9": "res://scenes/stage_battle.tscn"
+	"stage_9": "res://scenes/stage_cutscene.tscn"
 }
 
 func _on_body_entered(body):

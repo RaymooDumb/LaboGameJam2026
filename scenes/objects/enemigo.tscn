@@ -1,20 +1,57 @@
 [gd_scene format=3 uid="uid://cuikyhhwwme6x"]
 
 [ext_resource type="Script" uid="uid://cf4lay8hcgpec" path="res://scripts/Enemigo.gd" id="1_kn40c"]
-[ext_resource type="Texture2D" uid="uid://curnqoyn4nuwj" path="res://icon.svg" id="1_qj036"]
+[ext_resource type="Texture2D" uid="uid://dpfsyxy51kjju" path="res://sprites/enemy/FrontAttack1.png" id="2_jubst"]
+[ext_resource type="Texture2D" uid="uid://bhhllv1kpocjg" path="res://sprites/enemy/FrontAttack2.png" id="3_fkjhn"]
+[ext_resource type="Texture2D" uid="uid://bqmwuibxaj28q" path="res://sprites/enemy/FrontAttack3.png" id="4_o848x"]
+[ext_resource type="Texture2D" uid="uid://ddybocaavty8h" path="res://sprites/enemy/FrontAttack4.png" id="5_muxr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_45oby"]
+size = Vector2(20, 25.553366)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55k3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jubst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fkjhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o848x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_muxr2")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 6.0
+}]
 
 [node name="Enemigo" type="Area2D" unique_id=352359588]
 script = ExtResource("1_kn40c")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=828822105]
-texture = ExtResource("1_qj036")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1888864368]
-scale = Vector2(6.475231, 6.475231)
+position = Vector2(0, -2.4999924)
+scale = Vector2(19.541105, 39.172924)
 shape = SubResource("RectangleShape2D_45oby")
 debug_color = Color(0.9971996, 0, 0.18073413, 0.41960785)
 
 [node name="Timer" type="Timer" parent="." unique_id=1853745577]
-wait_time = 3.0
+wait_time = 0.9
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928356016]
+position = Vector2(-48, 0)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_55k3o")
+animation = &"attack"
+autoplay = "attack"
+frame = 3
+frame_progress = 1.0
+
+[node name="CloserTimer" type="Timer" parent="." unique_id=1754366376]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="CloserTimer" to="." method="_on_closer_timer_timeout"]

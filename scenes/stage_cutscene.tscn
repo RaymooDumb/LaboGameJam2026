@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://m46pk5xbw8hv"]
+
+[ext_resource type="Script" uid="uid://bc5mgjp328epy" path="res://scenes/stage_cutscene.gd" id="1_nugdm"]
+[ext_resource type="Texture2D" uid="uid://dt7mirlq5odpl" path="res://sprites/backgrounds/Black_colour.jpg" id="2_3h8ep"]
+
+[node name="StageCutscene" type="Control" unique_id=1046394891]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nugdm")
+
+[node name="Timer" type="Timer" parent="." unique_id=1686737433]
+wait_time = 3.0
+autostart = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=349103610]
+wait_time = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2056573393]
+position = Vector2(958.5, 539.5)
+scale = Vector2(4.033228, 1.6977848)
+texture = ExtResource("2_3h8ep")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

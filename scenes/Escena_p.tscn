@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b72rgnuknyirk"]
 
 [ext_resource type="PackedScene" uid="uid://cvtpjsxgahtdl" path="res://scenes/objects/cursor.tscn" id="1_1wlxs"]
-[ext_resource type="Script" path="res://scripts/Spawner.gd" id="1_x6fsx"]
+[ext_resource type="Script" uid="uid://6af5hcsad2r6" path="res://scripts/Spawner.gd" id="1_x6fsx"]
 [ext_resource type="Texture2D" uid="uid://bbwi4nyrdcbrt" path="res://sprites/backgrounds/BGBattle.png" id="2_v3sbf"]
 [ext_resource type="AudioStream" uid="uid://dbp3bo7p8wyp5" path="res://songs/Balazo.ogg" id="3_x6fsx"]
 
@@ -15,15 +15,13 @@ scale = Vector2(0.47781348, 0.47781348)
 texture = ExtResource("2_v3sbf")
 
 [node name="Spawn1" type="Node2D" parent="." unique_id=1808609370]
-position = Vector2(1516, 320)
+position = Vector2(898, 733)
 
 [node name="Spawn2" type="Node2D" parent="." unique_id=9766250]
-position = Vector2(518, 607)
+position = Vector2(463, 515)
 
 [node name="Spawn3" type="Node2D" parent="." unique_id=1107169970]
-position = Vector2(1446, 895)
-
-[node name="Cursor" parent="." unique_id=32566865 instance=ExtResource("1_1wlxs")]
+position = Vector2(1471, 552)
 
 [node name="AudioDisparo" type="AudioStreamPlayer2D" parent="." unique_id=2052916177]
 stream = ExtResource("3_x6fsx")
@@ -32,5 +30,9 @@ stream = ExtResource("3_x6fsx")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[connection signal="area_entered" from="Cursor" to="." method="_on_cursor_area_entered"]
-[connection signal="area_exited" from="Cursor" to="." method="_on_cursor_area_exited"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=503392995]
+
+[node name="Cursor" parent="CanvasLayer" unique_id=32566865 instance=ExtResource("1_1wlxs")]
+
+[connection signal="area_entered" from="CanvasLayer/Cursor" to="." method="_on_cursor_area_entered"]
+[connection signal="area_exited" from="CanvasLayer/Cursor" to="." method="_on_cursor_area_exited"]
